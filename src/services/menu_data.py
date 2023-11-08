@@ -10,21 +10,20 @@ class MenuData:
         self.dishes = set()
 
         with open(self.source_path) as file:
-            file_reader = csv.reader(file, delimiter=",")
-            header, *data = file_reader
+            file_reader = csv.DictReader(file, delimiter=",")
+            data = file_reader
             for item in data:
-                dish = Dish(item[0], float(item[1]))
-                ingredient = Ingredient(item[2])
-                amount = item[3]
+                dish = Dish(item["dish"], float(item["price"]))
+                ingredient = Ingredient(item["ingredient"])
+                amount = item["recipe_amount"]
 
                 if dish not in self.dishes:
-                    dish.add_ingredient_dependency(
-                        ingredient, int(amount)
-                    )
+                    dish.add_ingredient_dependency(ingredient, int(amount))
                     self.dishes.add(dish)
+                    print(self.dishes)
                 else:
                     for exist_dish in self.dishes:
-                        if exist_dish.name == item[0]:
+                        if exist_dish.name == item["dish"]:
                             exist_dish.add_ingredient_dependency(
                                 ingredient, int(amount)
                             )
