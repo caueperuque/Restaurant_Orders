@@ -1,4 +1,4 @@
-# Projeto: Ferramenta de Construção de Cardápios para o Restaurante 🍝 🦐 Chapa Quente 🍛 🥘
+# Projeto: Restaurant Orders para o Restaurante 🍝 🦐 Chapa Quente 🍛 🥘
 
 Este projeto é uma solução completa para o **Restaurante Chapa Quente**, visando aprimorar a gestão de receitas, estoque de ingredientes e a criação de cardápios personalizados. A ferramenta foi desenvolvida para simplificar o processo de construção de cardápios, levando em consideração restrições alimentares e a disponibilidade de ingredientes em estoque.
 
